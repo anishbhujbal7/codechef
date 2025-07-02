@@ -32,6 +32,7 @@ int minTimeToInvadeAll(vector<vector<char>>& grid){
         int row=q.front().second.first;
         int col = q.front().second.second;
         maxTime=max(t,maxTime);
+        q.pop();
         for(auto [r,c]:adjList){
             int newRow = row+r;
             int newCol=col+c;
@@ -59,4 +60,3 @@ int main() {
 
     cout << minTimeToInvadeAll(grid) << endl;  // Output: 4 (for example)
 }
-
